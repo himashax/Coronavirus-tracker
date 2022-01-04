@@ -11,12 +11,12 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import com.javaprojects.coronavirustracker.models.LocationStats;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
-import models.LocationStats;
 
 @Service
 public class CoronaVirusDataService {

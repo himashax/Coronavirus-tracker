@@ -1,4 +1,4 @@
-package models;
+package com.javaprojects.coronavirustracker.models;
 
 public class LocationStats {
     
@@ -30,5 +30,5 @@ public class LocationStats {
         return "LocationStats [country=" + country + ", latestTotalCases=" + latestTotalCases + ", state=" + state
                 + "]";
     }
-    
+
 }
