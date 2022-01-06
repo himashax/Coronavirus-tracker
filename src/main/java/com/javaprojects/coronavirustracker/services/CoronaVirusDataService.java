@@ -22,6 +22,11 @@ import org.springframework.stereotype.Service;
 public class CoronaVirusDataService {
  
     private List<LocationStats> allStats = new ArrayList<>();
+
+    public List<LocationStats> getAllStats() {
+        return allStats;
+    }
+
     private static String VIRUS_DATA_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv";
 
     @PostConstruct
@@ -44,7 +49,7 @@ public class CoronaVirusDataService {
                 locationStat.setState(record.get("Province/State"));
                 locationStat.setCountry(record.get("Country/Region"));
                 locationStat.setLatestTotalCases(Integer.parseInt(record.get(record.size()-1)));
-                System.out.println(locationStat);
+                //System.out.println(locationStat);
                 newStats.add(locationStat);
             }
 
