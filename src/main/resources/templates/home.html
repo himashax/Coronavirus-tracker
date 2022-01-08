@@ -13,8 +13,14 @@
     <p th:text="${testName}">Welcome to our grocery store!</p>
 
     <h1>Locations</h1>
-    <h2 th:text="${reportedCases}">Total Reported Cases</h2> <br>
-    <h2 th:text="${newCases}"></h2>
+
+    <div class="card" style="background-color: rgb(216, 179, 156);">
+      <div class="card-body">
+        Total Reported Cases.  <h3 th:text="${reportedCases}"></h3>
+        Total New Cases. <h3 th:text="${newCases}"></h3>
+      </div>
+    </div>
+
     <br>
 
     <table class="table"> 
