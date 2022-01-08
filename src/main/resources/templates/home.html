@@ -13,8 +13,8 @@
     <p th:text="${testName}">Welcome to our grocery store!</p>
 
     <h1>Locations</h1>
-    <h2 th:text="${reportedCases}">Total Reported Cases</h2>
-  
+    <h2 th:text="${reportedCases}">Total Reported Cases</h2> <br>
+    <h2 th:text="${newCases}"></h2>
     <br>
 
     <table class="table"> 
@@ -22,11 +22,13 @@
         <th>State</th>
         <th>Country</th>
         <th>Latest Total Cases</th>
+        <th>Changes since last day</th>
       </tr>
       <tr th:each="location : ${locationStats}">
         <td th:text="${location.state}"></td>
         <td th:text="${location.country}"></td>
         <td th:text="${location.latestTotalCases}"></td>
+        <td th:text="${location.difFromPrevDay}">0</td>
       </tr>
     </table>
   
